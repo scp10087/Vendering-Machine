@@ -51,4 +51,5 @@ public:
 	CRect m_ShowRect;
 	
 
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 };

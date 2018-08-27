@@ -62,6 +62,7 @@ BEGIN_MESSAGE_MAP(CVenderingMachineDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_WM_CTLCOLOR()
 END_MESSAGE_MAP()
 
 
@@ -196,4 +197,36 @@ void CVenderingMachineDlg::ShowPage(int CurrentPage)
 	}
 	break;
 	}
+}
+
+HBRUSH CVenderingMachineDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
+
+	// TODO:  在此更改 DC 的任何特性
+	static CBrush gBr;
+	static bool isInited = false;
+	if (!isInited)
+	{
+		CBitmap bitmap;
+		bitmap.LoadBitmap(IDB_BITMAP2);
+		gBr.CreatePatternBrush(&bitmap);
+		COLORREF clearColor = -1;
+		bitmap.DeleteObject();
+		isInited = true;
+	}
+	if (pWnd == this)
+	{
+		pDC->SetBkMode(TRANSPARENT);
+		return gBr; //主窗口背景使用这个背景刷
+	}
+	else
+	{
+		pDC->SetBkMode(TRANSPARENT);
+		return   (HBRUSH)::GetStockObject(NULL_BRUSH); //其他控件使用透明背景
+	}
+
+
+	// TODO:  如果默认的不是所需画笔，则返回另一个画笔
+	return hbr;
 }
