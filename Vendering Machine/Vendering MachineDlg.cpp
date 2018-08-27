@@ -185,14 +185,14 @@ void CVenderingMachineDlg::ShowPage(int CurrentPage)
 	{
 		cgoods->ShowWindow(SW_SHOW);
 		chelp->ShowWindow(SW_HIDE);
-		SetTimer(1, 1000, NULL);
+
 	}
 	break;
 	case DLG_CHELP:
 	{
 		cgoods->ShowWindow(SW_HIDE);
 		chelp->ShowWindow(SW_SHOW);
-		KillTimer(1);
+
 	}
 	break;
 	}
