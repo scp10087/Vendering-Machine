@@ -126,6 +126,9 @@
     <None Include="res\VenderingMachine.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\新建文件夹\自动售货机饮料\饮料BMP\timgk.bmp" />
+    <Image Include="C:\Users\ASUS\Desktop\00420405.bmp" />
+    <Image Include="C:\Users\ASUS\Desktop\0042040509469466_b.bmp" />
     <Image Include="res\Vendering Machine.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -71,5 +71,14 @@
     <Image Include="res\Vendering Machine.ico">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="..\..\..\新建文件夹\自动售货机饮料\饮料BMP\timgk.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="C:\Users\ASUS\Desktop\0042040509469466_b.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="C:\Users\ASUS\Desktop\00420405.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
