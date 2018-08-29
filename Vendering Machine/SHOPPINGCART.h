@@ -1,0 +1,24 @@
+#pragma once
+
+
+// CSHOPPINGCART 对话框
+
+class CSHOPPINGCART : public CDialogEx
+{
+	DECLARE_DYNAMIC(CSHOPPINGCART)
+
+public:
+	CSHOPPINGCART(CWnd* pParent = NULL);   // 标准构造函数
+	virtual ~CSHOPPINGCART();
+
+// 对话框数据
+	enum { IDD = IDD_SHOPPINGCART };
+
+protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
+
+	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedButton2();
+	afx_msg void OnBnClickedButton1();
+};

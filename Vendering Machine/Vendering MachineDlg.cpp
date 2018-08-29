@@ -107,11 +107,45 @@ BOOL CVenderingMachineDlg::OnInitDialog()
 	//帮助界面初始化
 	chelp = new CHELP;
 	chelp->Create(IDD_HELP, this);
-	chelp->ShowWindow(SW_SHOW);
-
+	chelp->ShowWindow(SW_HIDE);
 	GetWindowRect(m_ShowRect);
 	m_ShowRect = CRect(0, 0, m_ShowRect.Width(), m_ShowRect.Height());
 	chelp->MoveWindow(m_ShowRect);
+	//管理员登陆界面初始化
+	clogin = new CLOGIN;
+	clogin->Create(IDD_LOGIN, this);
+	GetWindowRect(m_ShowRect);
+	m_ShowRect = CRect(0, 0, m_ShowRect.Width(), m_ShowRect.Height());
+	clogin->MoveWindow(m_ShowRect);
+	clogin->ShowWindow(SW_HIDE);
+	//取货码界面初始化
+	cpickupcode = new CPICKUPCODE;
+	cpickupcode->Create(IDD_PICKUPCODE, this);
+	GetWindowRect(m_ShowRect);
+	m_ShowRect = CRect(0, 0, m_ShowRect.Width(), m_ShowRect.Height());
+	cpickupcode->MoveWindow(m_ShowRect);
+	cpickupcode->ShowWindow(SW_HIDE);
+	//管理员界面初始化
+	cadministrator = new CADMINISTRATOR;
+	cadministrator->Create(IDD_ADMINISTRATOR, this);
+	GetWindowRect(m_ShowRect);
+	m_ShowRect = CRect(0, 0, m_ShowRect.Width(), m_ShowRect.Height());
+	cadministrator->MoveWindow(m_ShowRect);
+	cadministrator->ShowWindow(SW_HIDE);
+	//购物车界面初始化
+	cshoppingcart = new CSHOPPINGCART;
+	cshoppingcart->Create(IDD_SHOPPINGCART, this);
+	GetWindowRect(m_ShowRect);
+	m_ShowRect = CRect(0, 0, m_ShowRect.Width(), m_ShowRect.Height());
+	cshoppingcart->MoveWindow(m_ShowRect);
+	cshoppingcart->ShowWindow(SW_HIDE);
+	//管理员登陆界面初始化
+	cpay = new CPAY;
+	cpay->Create(IDD_PAY, this);
+	GetWindowRect(m_ShowRect);
+	m_ShowRect = CRect(0, 0, m_ShowRect.Width(), m_ShowRect.Height());
+	cpay->MoveWindow(m_ShowRect);
+	cpay->ShowWindow(SW_HIDE);
 	ShowPage(0);
 
 
@@ -185,14 +219,77 @@ void CVenderingMachineDlg::ShowPage(int CurrentPage)
 	{
 		cgoods->ShowWindow(SW_SHOW);
 		chelp->ShowWindow(SW_HIDE);
-
+		clogin->ShowWindow(SW_HIDE);
+		cpickupcode->ShowWindow(SW_HIDE);
+		cadministrator->ShowWindow(SW_HIDE);
+		cshoppingcart->ShowWindow(SW_HIDE);
+		cpay->ShowWindow(SW_HIDE);
 	}
 	break;
 	case DLG_CHELP:
 	{
 		cgoods->ShowWindow(SW_HIDE);
 		chelp->ShowWindow(SW_SHOW);
-
+		clogin->ShowWindow(SW_HIDE);
+		cpickupcode->ShowWindow(SW_HIDE);
+		cadministrator->ShowWindow(SW_HIDE);
+		cshoppingcart->ShowWindow(SW_HIDE);
+		cpay->ShowWindow(SW_HIDE);
+	}
+	break;
+	case DLG_CLOGIN:
+	{
+		cgoods->ShowWindow(SW_HIDE);
+		chelp->ShowWindow(SW_HIDE);
+		clogin->ShowWindow(SW_SHOW);
+		cpickupcode->ShowWindow(SW_HIDE);
+		cadministrator->ShowWindow(SW_HIDE);
+		cshoppingcart->ShowWindow(SW_HIDE);
+		cpay->ShowWindow(SW_HIDE);
+	}
+	break;
+	case DLG_CPICKUPCODE:
+	{
+		cgoods->ShowWindow(SW_HIDE);
+		chelp->ShowWindow(SW_HIDE);
+		clogin->ShowWindow(SW_HIDE);
+		cpickupcode->ShowWindow(SW_SHOW);
+		cadministrator->ShowWindow(SW_HIDE);
+		cshoppingcart->ShowWindow(SW_HIDE);
+		cpay->ShowWindow(SW_HIDE);
+	}
+	break;
+	case DLG_CADMINISTRATOR:
+	{
+		cgoods->ShowWindow(SW_HIDE);
+		chelp->ShowWindow(SW_HIDE);
+		clogin->ShowWindow(SW_HIDE);
+		cpickupcode->ShowWindow(SW_HIDE);
+		cadministrator->ShowWindow(SW_SHOW);
+		cshoppingcart->ShowWindow(SW_HIDE);
+		cpay->ShowWindow(SW_HIDE);
+	}
+	break;
+	case DLG_CSHOPPINGCART:
+	{
+		cgoods->ShowWindow(SW_HIDE);
+		chelp->ShowWindow(SW_HIDE);
+		clogin->ShowWindow(SW_HIDE);
+		cpickupcode->ShowWindow(SW_HIDE);
+		cadministrator->ShowWindow(SW_HIDE);
+		cshoppingcart->ShowWindow(SW_SHOW);
+		cpay->ShowWindow(SW_HIDE);
+	}
+	break;
+	case DLG_CPAY:
+	{
+		cgoods->ShowWindow(SW_HIDE);
+		chelp->ShowWindow(SW_HIDE);
+		clogin->ShowWindow(SW_HIDE);
+		cpickupcode->ShowWindow(SW_HIDE);
+		cadministrator->ShowWindow(SW_HIDE);
+		cshoppingcart->ShowWindow(SW_HIDE);
+		cpay->ShowWindow(SW_SHOW);
 	}
 	break;
 	}

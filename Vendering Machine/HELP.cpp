@@ -29,7 +29,6 @@ void CHELP::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CHELP, CDialogEx)
 	ON_BN_CLICKED(IDOK, &CHELP::OnBnClickedOk)
-	ON_BN_CLICKED(IDCANCEL, &CHELP::OnBnClickedCancel)
 END_MESSAGE_MAP()
 
 
@@ -44,8 +43,3 @@ void CHELP::OnBnClickedOk()
 }
 
 
-void CHELP::OnBnClickedCancel()
-{
-	// TODO:  在此添加控件通知处理程序代码
-	CDialogEx::OnCancel();
-}

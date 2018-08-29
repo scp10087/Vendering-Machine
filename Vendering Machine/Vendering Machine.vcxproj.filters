@@ -39,6 +39,21 @@
     <ClInclude Include="GOODS.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="LOGIN.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PICKUPCODE.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SHOPPINGCART.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PAY.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ADMINISTRATOR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Vendering Machine.cpp">
@@ -54,6 +69,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="GOODS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LOGIN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PICKUPCODE.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SHOPPINGCART.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PAY.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ADMINISTRATOR.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

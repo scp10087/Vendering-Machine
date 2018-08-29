@@ -5,6 +5,11 @@
 #pragma once
 #include "GOODS.h"
 #include "HELP.h"
+#include "LOGIN.h"
+#include "PICKUPCODE.h"
+#include "ADMINISTRATOR.h"
+#include "SHOPPINGCART.h"
+#include "PAY.h"
 // CVenderingMachineDlg 对话框
 class CVenderingMachineDlg : public CDialogEx
 {
@@ -32,11 +37,20 @@ protected:
 public:
 	CGOODS   *cgoods;
 	CHELP *chelp;
-
+	CLOGIN *clogin;
+	CPICKUPCODE *cpickupcode;
+	CADMINISTRATOR *cadministrator;
+	CSHOPPINGCART *cshoppingcart;
+	CPAY *cpay;
 	enum
 	{
 		DLG_CGOODS = 0,
 		DLG_CHELP,
+		DLG_CLOGIN,
+		DLG_CPICKUPCODE,
+		DLG_CADMINISTRATOR,
+		DLG_CSHOPPINGCART,
+		DLG_CPAY,
 	};
 
 	///加载界面
@@ -45,8 +59,8 @@ public:
 	void ShowPage(int CurrentPage);
 
 	//////添加多界面
-	CDialog *m_pDlgPages[2];///自定义需要显示的界面个数
-	UINT        m_DlgIDD[2];      ///每个对话框对应的ID
+	CDialog *m_pDlgPages[7];///自定义需要显示的界面个数
+	UINT        m_DlgIDD[7];      ///每个对话框对应的ID
 	int m_nDlgPageIdx ;
 	CRect m_ShowRect;
 	
