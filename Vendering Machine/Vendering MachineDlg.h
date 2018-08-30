@@ -10,6 +10,7 @@
 #include "ADMINISTRATOR.h"
 #include "SHOPPINGCART.h"
 #include "PAY.h"
+#include "InfoFile.h"
 // CVenderingMachineDlg ¶Ô»°¿ò
 class CVenderingMachineDlg : public CDialogEx
 {

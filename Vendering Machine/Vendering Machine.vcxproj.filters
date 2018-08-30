@@ -54,6 +54,9 @@
     <ClInclude Include="ADMINISTRATOR.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="InfoFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Vendering Machine.cpp">
@@ -84,6 +87,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ADMINISTRATOR.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoFile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

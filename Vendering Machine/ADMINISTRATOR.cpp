@@ -30,6 +30,7 @@ void CADMINISTRATOR::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CADMINISTRATOR, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CADMINISTRATOR::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CADMINISTRATOR::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -41,4 +42,11 @@ void CADMINISTRATOR::OnBnClickedButton1()
 	// TODO:  在此添加控件通知处理程序代码
 	CVenderingMachineDlg *pMMD = (CVenderingMachineDlg*)AfxGetMainWnd();
 	pMMD->ShowPage(0);//跳到商品对话框
+}
+
+
+void CADMINISTRATOR::OnBnClickedButton2()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	exit(0);
 }
