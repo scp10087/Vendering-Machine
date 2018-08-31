@@ -21,4 +21,6 @@ protected:
 public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
+	virtual BOOL OnInitDialog();
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 };

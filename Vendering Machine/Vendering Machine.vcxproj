@@ -138,6 +138,9 @@
     <None Include="res\VenderingMachine.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\background.bmp" />
+    <Image Include="res\background1.bmp" />
+    <Image Include="res\bitmap2.bmp" />
     <Image Include="res\Vendering Machine.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

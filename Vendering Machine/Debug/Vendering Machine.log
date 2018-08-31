@@ -1,23 +1,9 @@
-﻿生成启动时间为 2018/8/30 20:02:15。
-     1>项目“E:\MFC\Vendering Machine\Vendering Machine\Vendering Machine.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         E:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNING /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Vendering Machine.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ADMINISTRATOR.cpp GOODS.cpp HELP.cpp LOGIN.cpp PAY.cpp PICKUPCODE.cpp SHOPPINGCART.cpp "Vendering Machine.cpp" "Vendering MachineDlg.cpp"
-         LOGIN.cpp
-         正在生成代码...
-         正在编译...
-         Vendering MachineDlg.cpp
-         Vendering Machine.cpp
-         SHOPPINGCART.cpp
-         PICKUPCODE.cpp
-         PAY.cpp
-         HELP.cpp
-         GOODS.cpp
-         ADMINISTRATOR.cpp
-         正在生成代码...
-       ResourceCompile:
+﻿生成启动时间为 2018/8/31 17:06:05。
+     1>项目“D:\MFC\Vendering Machine\Vendering Machine\Vendering Machine.vcxproj”在节点 2 上(Build 个目标)。
+     1>ResourceCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\Vendering Machine.res" "Vendering Machine.rc" 
        Link:
-         E:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\MFC\Vendering Machine\Debug\Vendering Machine.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:E:\vs2013\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"E:\MFC\Vendering Machine\Debug\Vendering Machine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\MFC\Vendering Machine\Debug\Vendering Machine.lib" /MACHINE:X86 "Debug\Vendering Machine.res"
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MFC\Vendering Machine\Debug\Vendering Machine.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\MFC\Vendering Machine\Debug\Vendering Machine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MFC\Vendering Machine\Debug\Vendering Machine.lib" /MACHINE:X86 "Debug\Vendering Machine.res"
          Debug\ADMINISTRATOR.obj
          Debug\GOODS.obj
          Debug\HELP.obj
@@ -29,9 +15,9 @@
          Debug\stdafx.obj
          "Debug\Vendering Machine.obj"
          "Debug\Vendering MachineDlg.obj"
-         Vendering Machine.vcxproj -> E:\MFC\Vendering Machine\Debug\Vendering Machine.exe
-     1>已完成生成项目“E:\MFC\Vendering Machine\Vendering Machine\Vendering Machine.vcxproj”(Build 个目标)的操作。
+         Vendering Machine.vcxproj -> D:\MFC\Vendering Machine\Debug\Vendering Machine.exe
+     1>已完成生成项目“D:\MFC\Vendering Machine\Vendering Machine\Vendering Machine.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:11.17
+已用时间 00:00:08.19

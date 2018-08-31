@@ -66,4 +66,5 @@ public:
 	CRect m_ShowRect;
 	
 
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 };

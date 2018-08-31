@@ -62,6 +62,7 @@ BEGIN_MESSAGE_MAP(CVenderingMachineDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_WM_TIMER()
 END_MESSAGE_MAP()
 
 
@@ -97,7 +98,11 @@ BOOL CVenderingMachineDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO:  在此添加额外的初始化代码
+	CRect   temprect(0, 0, 480, 700);
+	CWnd::SetWindowPos(NULL, 0, 0, temprect.Width(), temprect.Height(), SWP_NOZORDER | SWP_NOMOVE);
 	//商品界面初始化
+
+
 	cgoods = new CGOODS;
 	cgoods->Create(IDD_GOODS, this);
 	GetWindowRect(m_ShowRect);
@@ -148,6 +153,8 @@ BOOL CVenderingMachineDlg::OnInitDialog()
 	cpay->ShowWindow(SW_HIDE);
 	ShowPage(0);
 
+	SetTimer(1, 1000, NULL);
+
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -190,7 +197,34 @@ void CVenderingMachineDlg::OnPaint()
 	}
 	else
 	{
-		CDialogEx::OnPaint();
+		//注释该语句：防止重复调用重画函数  
+		//CDialogEx::OnPaint();  
+
+		//添加代码对话框背景贴图  
+		CPaintDC   dc(this);
+		CRect   rect;
+		GetClientRect(&rect);                                 //获取对话框长宽         
+		CDC   dcBmp;                                           //定义并创建一个内存设备环境  
+		dcBmp.CreateCompatibleDC(&dc);                         //创建兼容性DC  
+		CBitmap   bmpBackground;
+		bmpBackground.LoadBitmap(IDB_BITMAP2);                 //载入资源中的IDB_BITMAP1图片  
+		BITMAP   m_bitmap;                                     //图片变量                  
+		bmpBackground.GetBitmap(&m_bitmap);                    //将图片载入位图中  
+		CBitmap   *pbmpOld = dcBmp.SelectObject(&bmpBackground); //将位图选入临时内存设备环境    
+		//调用函数显示图片 StretchBlt显示形状可变  
+		dc.StretchBlt(0, 0, rect.Width(), rect.Height(), &dcBmp, 0, 0,
+			m_bitmap.bmWidth, m_bitmap.bmHeight, SRCCOPY);
+
+		/******************************************************/
+		/** StretchBlt()                                     **/
+		/** 参数x、y位图目标矩形左上角x、y的坐标值 居中      **/
+		/** nWidth、nHeigth位图目标矩形的逻辑宽度和高度      **/
+		/** pSrcDC表示源设备CDC指针                          **/
+		/** xSrc、ySrc表示位图源矩形的左上角的x、y逻辑坐标值 **/
+		/** dwRop表示显示位图的光栅操作方式                  **/
+		/** SRCCOPY用于直接将位图复制到目标环境中            **/
+		/******************************************************/
+		dc.SetStretchBltMode(COLORONCOLOR);// 防止图片失真 
 	}
 }
 
@@ -293,4 +327,13 @@ void CVenderingMachineDlg::ShowPage(int CurrentPage)
 	}
 	break;
 	}
+}
+
+void CVenderingMachineDlg::OnTimer(UINT_PTR nIDEvent)
+{
+	// TODO:  在此添加消息处理程序代码和/或调用默认值
+	CTime t = CTime::GetCurrentTime();
+	CString strTime = t.Format(_T("%Y-%m-%d %H:%M:%S"));
+	SetDlgItemText(IDC_TIME7, strTime);
+	CDialogEx::OnTimer(nIDEvent);
 }

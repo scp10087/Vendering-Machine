@@ -107,5 +107,14 @@
     <Image Include="res\Vendering Machine.ico">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\background.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\background1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

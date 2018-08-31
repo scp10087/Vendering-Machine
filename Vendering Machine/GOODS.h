@@ -24,4 +24,7 @@ public:
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton3();
+	virtual BOOL OnInitDialog();
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	afx_msg void OnPaint();
 };
