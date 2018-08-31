@@ -97,6 +97,8 @@ BOOL CVenderingMachineDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO:  在此添加额外的初始化代码
+	MoveWindow(0, 0, 800, 500);
+	CenterWindow();
 	//商品界面初始化
 	cgoods = new CGOODS;
 	cgoods->Create(IDD_GOODS, this);

@@ -57,6 +57,18 @@
     <ClInclude Include="InfoFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ADM_LOGIN.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ADM_GOODS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SELECT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DISPLAY.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Vendering Machine.cpp">
@@ -90,6 +102,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="InfoFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ADM_LOGIN.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ADM_GOODS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SELECT.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DISPLAY.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

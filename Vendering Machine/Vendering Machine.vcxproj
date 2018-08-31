@@ -102,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ADMINISTRATOR.h" />
+    <ClInclude Include="ADM_GOODS.h" />
+    <ClInclude Include="ADM_LOGIN.h" />
+    <ClInclude Include="DISPLAY.h" />
     <ClInclude Include="GOODS.h" />
     <ClInclude Include="HELP.h" />
     <ClInclude Include="InfoFile.h" />
@@ -109,6 +112,7 @@
     <ClInclude Include="PAY.h" />
     <ClInclude Include="PICKUPCODE.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SELECT.h" />
     <ClInclude Include="SHOPPINGCART.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -117,12 +121,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADMINISTRATOR.cpp" />
+    <ClCompile Include="ADM_GOODS.cpp" />
+    <ClCompile Include="ADM_LOGIN.cpp" />
+    <ClCompile Include="DISPLAY.cpp" />
     <ClCompile Include="GOODS.cpp" />
     <ClCompile Include="HELP.cpp" />
     <ClCompile Include="InfoFile.cpp" />
     <ClCompile Include="LOGIN.cpp" />
     <ClCompile Include="PAY.cpp" />
     <ClCompile Include="PICKUPCODE.cpp" />
+    <ClCompile Include="SELECT.cpp" />
     <ClCompile Include="SHOPPINGCART.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -19,6 +19,11 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnBnClickedButton1();
-	afx_msg void OnBnClickedButton2();
+
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+public:
+	CFrameWnd *m_pMyFrame;
+	CSplitterWnd m_cSplitter;
+	afx_msg void OnDestroy();
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 };
