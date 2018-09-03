@@ -44,6 +44,7 @@ BEGIN_MESSAGE_MAP(CLOGIN, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON10, &CLOGIN::OnBnClickedButton10)
 	ON_BN_CLICKED(IDC_BUTTON12, &CLOGIN::OnBnClickedButton12)
 	ON_BN_CLICKED(IDC_BUTTON13, &CLOGIN::OnBnClickedButton13)
+	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
 
@@ -185,4 +186,25 @@ void CLOGIN::OnBnClickedButton13()
 		m_pwd = m_pwd.Left(m_pwd.GetLength() - 1);
 	}
 	UpdateData(FALSE);
+}
+
+
+void CLOGIN::OnPaint()
+{
+	CPaintDC dc(this); // device context for painting
+	// TODO:  在此处添加消息处理程序代码
+	// 不为绘图消息调用 CDialogEx::OnPaint()
+	CRect   rect;
+	GetClientRect(&rect);                                 //获取对话框长宽         
+	CDC   dcBmp;                                           //定义并创建一个内存设备环境  
+	dcBmp.CreateCompatibleDC(&dc);                         //创建兼容性DC  
+	CBitmap   bmpBackground;
+	bmpBackground.LoadBitmap(IDB_BITMAP16);                 //载入资源中的IDB_BITMAP1图片  
+	BITMAP   m_bitmap;                                     //图片变量                  
+	bmpBackground.GetBitmap(&m_bitmap);                    //将图片载入位图中  
+	CBitmap   *pbmpOld = dcBmp.SelectObject(&bmpBackground); //将位图选入临时内存设备环境    
+	//调用函数显示图片 StretchBlt显示形状可变  
+	dc.StretchBlt(0, 0, rect.Width(), rect.Height(), &dcBmp, 0, 0,
+		m_bitmap.bmWidth, m_bitmap.bmHeight, SRCCOPY);
+	dc.SetStretchBltMode(COLORONCOLOR);// 防止图片失真 
 }

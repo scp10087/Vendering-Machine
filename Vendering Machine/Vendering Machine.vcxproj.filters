@@ -116,5 +116,53 @@
     <Image Include="res\background1.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\11.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\冰红茶1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\海之言2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\可口可乐1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\茉莉清茶1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\农夫山泉1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\小茗同学1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\小茗同学2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\雪碧1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\怡宝1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\茶π2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\海之言1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\购物车.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\background2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\background2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="C:\Users\ASUS\Desktop\kk.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

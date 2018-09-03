@@ -138,10 +138,26 @@
     <None Include="res\VenderingMachine.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="C:\Users\ASUS\Desktop\kk.bmp" />
+    <Image Include="res\11.bmp" />
     <Image Include="res\background.bmp" />
     <Image Include="res\background1.bmp" />
+    <Image Include="res\background2.bmp" />
+    <Image Include="res\background2.png" />
     <Image Include="res\bitmap2.bmp" />
     <Image Include="res\Vendering Machine.ico" />
+    <Image Include="res\农夫山泉1.bmp" />
+    <Image Include="res\冰红茶1.bmp" />
+    <Image Include="res\可口可乐1.bmp" />
+    <Image Include="res\小茗同学1.bmp" />
+    <Image Include="res\小茗同学2.bmp" />
+    <Image Include="res\怡宝1.bmp" />
+    <Image Include="res\海之言1.bmp" />
+    <Image Include="res\海之言2.bmp" />
+    <Image Include="res\茉莉清茶1.bmp" />
+    <Image Include="res\茶π2.bmp" />
+    <Image Include="res\购物车.bmp" />
+    <Image Include="res\雪碧1.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
