@@ -11,6 +11,9 @@
 #include "SHOPPINGCART.h"
 #include "PAY.h"
 #include "InfoFile.h"
+
+
+
 // CVenderingMachineDlg ¶Ô»°¿ò
 class CVenderingMachineDlg : public CDialogEx
 {
@@ -34,6 +37,7 @@ protected:
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
+
 	DECLARE_MESSAGE_MAP()
 public:
 	CGOODS   *cgoods;

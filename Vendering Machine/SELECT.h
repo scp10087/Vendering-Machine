@@ -1,6 +1,6 @@
 #pragma once
 
-
+#include "ADMINISTRATOR.h"
 // CSELECT йсм╪
 
 class CSELECT : public CTreeView
@@ -21,6 +21,14 @@ public:
 
 protected:
 	DECLARE_MESSAGE_MAP()
+private:
+	CTreeCtrl *m_treeCtrl;
+	CImageList m_imageList;
+	CADMINISTRATOR ad;
+	bool m_bCanSendMsg;
+public:
+	virtual void OnInitialUpdate();
+	afx_msg void OnTvnSelchanged(NMHDR *pNMHDR, LRESULT *pResult);
 };
 
 

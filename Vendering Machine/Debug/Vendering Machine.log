@@ -1,8 +1,8 @@
-﻿生成启动时间为 2018/8/31 21:20:26。
+﻿生成启动时间为 2018/9/3 9:18:02。
      1>项目“E:\MFC\Vendering Machine\Vendering Machine\Vendering Machine.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         E:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNING /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Vendering Machine.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ADMINISTRATOR.cpp
-         ADMINISTRATOR.cpp
+         E:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _CRT_SECURE_NO_WARNING /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Vendering Machine.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SELECT.cpp
+         SELECT.cpp
        Link:
          E:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\MFC\Vendering Machine\Debug\Vendering Machine.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:E:\vs2013\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"E:\MFC\Vendering Machine\Debug\Vendering Machine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\MFC\Vendering Machine\Debug\Vendering Machine.lib" /MACHINE:X86 "Debug\Vendering Machine.res"
          Debug\ADMINISTRATOR.obj
@@ -25,4 +25,4 @@
 
 生成成功。
 
-已用时间 00:00:02.43
+已用时间 00:00:02.04

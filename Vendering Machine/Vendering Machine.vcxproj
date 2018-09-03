@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Vendering Machine.ico" />
+    <Image Include="res\vendor machine.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
