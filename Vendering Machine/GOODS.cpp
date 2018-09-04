@@ -219,7 +219,17 @@ void CGOODS::OnTimer(UINT_PTR nIDEvent)
 {
 	// TODO:  在此添加消息处理程序代码和/或调用默认值
 	CTime t = CTime::GetCurrentTime();
-	CString strTime = t.Format(_T("%Y-%m-%d %H:%M:%S"));
+	strTime = t.Format(_T("%Y-%m-%d %H:%M:%S"));
+    if (((CStatic*)GetDlgItem(IDC_TIME2))->GetSafeHwnd())
+	{
+		CStatic* pStatic = (CStatic*)GetDlgItem(IDC_TIME2);
+		ASSERT(pStatic);
+		CRect rc;
+		pStatic->GetWindowRect(&rc);
+		ScreenToClient(&rc);
+		InvalidateRect(&rc);
+	}
+
 	SetDlgItemText(IDC_TIME2, strTime);
 
 	CDialogEx::OnTimer(nIDEvent);
@@ -257,88 +267,84 @@ HBRUSH CGOODS::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	// TODO:  在此更改 DC 的任何特性
 	if (pWnd->GetDlgCtrlID() == IDC_1)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_2)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_3)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_4)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_5)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_6)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_7)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_8)//如果是静态编辑框
 	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
-	if (pWnd->GetDlgCtrlID() == IDC_8)//如果是静态编辑框
-	{
-		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
-	}
+	
 	if (pWnd->GetDlgCtrlID() == IDC_9)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_10)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_11)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_12)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_17)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_14)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_15)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_16)//如果是静态编辑框
 	{
 		pDC->SetBkMode(TRANSPARENT);//把字体的背景变成透明的
-		return m_brush;//返回背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_13)//如果是静态编辑框
 	{
@@ -383,15 +389,15 @@ HBRUSH CGOODS::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 
 	if (pWnd->GetDlgCtrlID() == IDC_INFO1)
 	{
-		pDC->SetTextColor(RGB(176, 224, 230));   //设置字体颜色
+		pDC->SetTextColor(RGB(0,0,0));   //设置字体颜色
 		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
-		return (HBRUSH)::GetStockObject(WHITE_BRUSH);   // 设置背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	if (pWnd->GetDlgCtrlID() == IDC_TIME2)
 	{
-		pDC->SetTextColor(RGB(176, 224, 230));   //设置字体颜色
+		pDC->SetTextColor(RGB(0,0,0));   //设置字体颜色
 		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
-		return (HBRUSH)::GetStockObject(WHITE_BRUSH);   // 设置背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 	
     return hbr;
@@ -416,12 +422,13 @@ void CGOODS::OnDrawItem(int nIDCtl, LPDRAWITEMSTRUCT lpDrawItemStruct)
 	SetBkMode(lpDrawItemStruct->hDC, TRANSPARENT);
 	//if (lpDrawItemStruct->itemState&ODS_SELECTED)
 	{
-		CBrush brush(RGB(30, 144, 255));
+		CBrush brush(RGB(30,144,255));
 		dc.FillRect(&(lpDrawItemStruct->rcItem), &brush);
 		DrawText(lpDrawItemStruct->hDC, strText, strText.GetLength(),
 			&lpDrawItemStruct->rcItem, DT_SINGLELINE | DT_VCENTER | DT_CENTER);
 		SetBkMode(lpDrawItemStruct->hDC, TRANSPARENT);
 	}
 	dc.Detach();
+
 
 }

@@ -30,6 +30,7 @@ public:
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg void OnPaint();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
+
 private:
 	CStatic my1;
 	CStatic my2;
@@ -42,6 +43,7 @@ private:
 public:
 	afx_msg void OnDrawItem(int nIDCtl, LPDRAWITEMSTRUCT lpDrawItemStruct);
 private:
+	CString strTime;
 	CStatic my9;
 	CStatic my10;
 	CStatic my11;
@@ -59,3 +61,4 @@ private:
 	CStatic my23;
 	CStatic my24;
 };
+

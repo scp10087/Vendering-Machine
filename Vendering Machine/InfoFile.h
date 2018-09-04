@@ -4,10 +4,12 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-
+#include <afx.h>
 
 #define _F_LOGIN "./login.ini"
 #define _F_STOCK "./stock.txt"
+#define _F_FEEDBACK "./feedback.txt"
+
 
 using namespace std;
 
@@ -17,7 +19,7 @@ struct msg
 	string name;	//商品名
 	int price;		//商品价格
 	int num;		//商品个数
-};	
+};
 
 class CInfoFile
 {
@@ -26,7 +28,7 @@ public:
 	~CInfoFile();
 
 	//读取登录信息
-	void ReadPwd(CString &pwd);
+	void ReadLogin(CString &pwd);
 
 	//修改密码
 	void WritePwd(char* pwd);
@@ -43,4 +45,5 @@ public:
 	list<msg> ls;	//存储商品容器
 	int num;			//用来记录商品个数
 };
+
 

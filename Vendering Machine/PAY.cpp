@@ -32,6 +32,7 @@ BEGIN_MESSAGE_MAP(CPAY, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CPAY::OnBnClickedButton1)
 	ON_WM_TIMER()
 	ON_WM_PAINT()
+	ON_WM_CTLCOLOR()
 END_MESSAGE_MAP()
 
 
@@ -63,6 +64,16 @@ void CPAY::OnTimer(UINT_PTR nIDEvent)
 	// TODO:  在此添加消息处理程序代码和/或调用默认值
 	CTime t = CTime::GetCurrentTime();
 	CString strTime = t.Format(_T("%Y-%m-%d %H:%M:%S"));
+	if (((CStatic*)GetDlgItem(IDC_TIME4))->GetSafeHwnd())
+	{
+		CStatic* pStatic = (CStatic*)GetDlgItem(IDC_TIME4);
+		ASSERT(pStatic);
+		CRect rc;
+		pStatic->GetWindowRect(&rc);
+		ScreenToClient(&rc);
+		InvalidateRect(&rc);
+	}
+
 	SetDlgItemText(IDC_TIME4, strTime);
 
 	CDialogEx::OnTimer(nIDEvent);
@@ -87,4 +98,27 @@ void CPAY::OnPaint()
 	dc.StretchBlt(0, 0, rect.Width(), rect.Height(), &dcBmp, 0, 0,
 		m_bitmap.bmWidth, m_bitmap.bmHeight, SRCCOPY);
 	dc.SetStretchBltMode(COLORONCOLOR);// 防止图片失真 
+}
+
+
+HBRUSH CPAY::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
+	if (pWnd->GetDlgCtrlID() == IDC_INFO4)
+	{
+		pDC->SetTextColor(RGB(0, 0, 0));   //设置字体颜色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
+	}
+	if (pWnd->GetDlgCtrlID() == IDC_TIME4)
+	{
+		pDC->SetTextColor(RGB(0, 0, 0));   //设置字体颜色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
+	}
+
+	// TODO:  在此更改 DC 的任何特性
+
+	// TODO:  如果默认的不是所需画笔，则返回另一个画笔
+	return hbr;
 }

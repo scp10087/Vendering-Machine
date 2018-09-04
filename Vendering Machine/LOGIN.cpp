@@ -64,11 +64,13 @@ void CLOGIN::OnBnClickedButton2()
 	// TODO:  在此添加控件通知处理程序代码
 	CInfoFile cinfofile;
 	CString pwd;
-	cinfofile.ReadPwd(pwd);
+	cinfofile.ReadLogin(pwd);
 	if (m_pwd == pwd)
 	{
 		CVenderingMachineDlg *pMMD = (CVenderingMachineDlg*)AfxGetMainWnd();
 		pMMD->ShowPage(4);//跳到管理员对话框
+		m_pwd.Empty();
+		UpdateData(FALSE);
 	}
 	else
 	{

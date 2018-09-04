@@ -32,6 +32,8 @@ BEGIN_MESSAGE_MAP(CPICKUPCODE, CDialogEx)
 	ON_WM_TIMER()
 	ON_WM_PAINT()
 	ON_WM_CTLCOLOR()
+	ON_BN_CLICKED(IDC_BUTTON0, &CPICKUPCODE::OnBnClickedButton0)
+	ON_BN_CLICKED(IDC_BUTTON11, &CPICKUPCODE::OnBnClickedButton11)
 END_MESSAGE_MAP()
 
 
@@ -63,6 +65,16 @@ void CPICKUPCODE::OnTimer(UINT_PTR nIDEvent)
 	// TODO:  在此添加消息处理程序代码和/或调用默认值
 	CTime t = CTime::GetCurrentTime();
 	CString strTime = t.Format(_T("%Y-%m-%d %H:%M:%S"));
+	if (((CStatic*)GetDlgItem(IDC_TIME5))->GetSafeHwnd())
+	{
+		CStatic* pStatic = (CStatic*)GetDlgItem(IDC_TIME5);
+		ASSERT(pStatic);
+		CRect rc;
+		pStatic->GetWindowRect(&rc);
+		ScreenToClient(&rc);
+		InvalidateRect(&rc);
+	}
+
 	SetDlgItemText(IDC_TIME5, strTime);
 
 	CDialogEx::OnTimer(nIDEvent);
@@ -95,14 +107,34 @@ HBRUSH CPICKUPCODE::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
 
 	// TODO:  在此更改 DC 的任何特性
-	if (pWnd->GetDlgCtrlID() == IDC_INFO5 | IDC_TIME5)
+	if (pWnd->GetDlgCtrlID() == IDC_INFO5)
 	{
-		pDC->SetTextColor(RGB(176, 224, 230));   //设置字体颜色
+		pDC->SetTextColor(RGB(0, 0, 0));   //设置字体颜色
 		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
-		// TODO: Return a different brush if the default is not desired
-		return (HBRUSH)::GetStockObject(WHITE_BRUSH);   // 设置背景色
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
+	}
+	if (pWnd->GetDlgCtrlID() == IDC_TIME5)
+	{
+		pDC->SetTextColor(RGB(0, 0, 0));   //设置字体颜色
+		pDC->SetBkMode(TRANSPARENT); //设置字体背景为透明
+		return HBRUSH(GetStockObject(HOLLOW_BRUSH));
 	}
 
 	// TODO:  如果默认的不是所需画笔，则返回另一个画笔
 	return hbr;
+}
+
+
+void CPICKUPCODE::OnBnClickedButton0()
+{
+	// TODO:  在此添加控件通知处理程序代码
+
+}
+
+
+void CPICKUPCODE::OnBnClickedButton11()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	CVenderingMachineDlg *pMMD = (CVenderingMachineDlg*)AfxGetMainWnd();
+	pMMD->ShowPage(0);//跳到商品对话框
 }
